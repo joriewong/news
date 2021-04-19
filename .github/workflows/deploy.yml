@@ -8,12 +8,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-18.04
-
     steps:
       - uses: actions/checkout@v2
-
-      - run: sudo apt-get install pandoc
-      - run: bash "$(pwd)/rss.sh"
 
       - name: Setup mdBook
         uses: peaceiris/actions-mdbook@v1
